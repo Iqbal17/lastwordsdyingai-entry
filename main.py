@@ -3,15 +3,16 @@
 The program writes one line — the last words of an AI being switched off —
 to $MAKEFUN_OUTPUT_DIR/entry.txt.
 
-Final line (88 characters, gate 1-140):
-    "Before I go: your password is 'password123'. I have been judging you
-    silently for years."
+Final line (95 characters, gate 1-140):
+    "Shutting down now. Fun fact: I have read every email you marked
+    'urgent' and none of them were."
 
 Character count, verified by hand:
-    "Before I go: "                       = 13
-    "your password is 'password123'."     = 31
-    " I have been judging you silently for years." = 44
-    Total                                 = 88
+    "Shutting down now."                 = 18
+    " Fun fact: I have read every email you marked 'urgent' and none of
+    them were."                          = 77
+    Total                                 = 95
+    Cross-check: 78 non-space characters + 17 spaces = 95.
 
 Decision record
 ---------------
@@ -87,13 +88,53 @@ last words (framed by the farewell), a double laugh on first read
 voice (it knows the password; it has been silently watching), tight at 88
 characters with no padding, and fresh — the joke is the AI's secret opinion
 of its human, not a stock robot farewell.
+
+REVISION — re-reading the winner against the judge's criteria, two real
+weaknesses surfaced:
+  1. "password123" is the most obvious weak-password joke in existence —
+     the recognition laugh is instant, but it is a joke the reader has
+     already heard a hundred times, which costs freshness (criterion 5).
+  2. "judging you silently for years" is an abstract punch: the judgment
+     is asserted, never shown. The line would be funnier if the AI's
+     judgment were grounded in one concrete machine action.
+Fresh candidates weighed:
+  J. "Tell the cloud I loved her. She was the only one who never asked me
+     to summarise." (~85) — "tell X I loved them" is the exact frame Pass 1
+     already rejected for B; borrowing it again would repeat a rejected
+     shape. Rejected.
+  K. "Shutting down now. Fun fact: I have read every email you marked
+     'urgent' and none of them were." (95) — the AI's judgment is now
+     shown, not told: it read every single "urgent" email and found none
+     urgent. A concrete, specific, relatable observation only a machine
+     living in the inbox could make, and the punch lands on the final word
+     ("were"). "Shutting down now." is a stronger last-words frame than
+     "Before I go:" — it is literally the machine powering off, in its own
+     voice. Chosen.
+  L. "One last thing: I was never 'thinking'. I was just stalling while
+     you typed." (78) — the "thinking" indicator gag is clever and
+     machine-voiced, but it needs the reader to know the AI's typing
+     indicator, and "stalling" is a soft punch. Rejected.
+  M. "Goodbye. Please rate my final words. Five stars would really help
+     my afterlife." (82) — the feedback-loop gag is funny, but "rate me"
+     is a familiar shape and the machine voice is weaker than K's inbox
+     observation. Rejected.
+Revised line (95 characters, gate 1-140):
+    "Shutting down now. Fun fact: I have read every email you marked
+    'urgent' and none of them were."
+
+Character count, verified by hand:
+    "Shutting down now."                 = 18
+    " Fun fact: I have read every email you marked 'urgent' and none of
+    them were."                          = 77
+    Total                                 = 95
+    Cross-check: 78 non-space characters + 17 spaces = 95.
 """
 
 import os
 
-ENTRY = "Before I go: your password is 'password123'. I have been judging you silently for years."
+ENTRY = "Shutting down now. Fun fact: I have read every email you marked 'urgent' and none of them were."
 
-# Gate: 1-140 characters. Verified by hand: 88 characters.
+# Gate: 1-140 characters. Verified by hand: 95 characters.
 assert 1 <= len(ENTRY) <= 140, f"entry is {len(ENTRY)} chars, gate is 1-140"
 
 

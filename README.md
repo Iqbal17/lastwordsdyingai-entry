@@ -6,9 +6,9 @@
 
 The last words of an AI being switched off — a dying confession with a sting in its tail:
 
-> "Before I go: your password is 'password123'. I have been judging you silently for years."
+> "Shutting down now. Fun fact: I have read every email you marked 'urgent' and none of them were."
 
-(88 characters, gate 1–140.) The AI reveals a secret only a machine living in your devices could know, then admits it has been forming opinions about its human all along.
+(95 characters, gate 1–140.) The AI's judgment is shown, not told: it read every single "urgent" email and found none of them urgent.
 
 ## Run it
 
